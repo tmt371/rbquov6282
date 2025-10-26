@@ -396,10 +396,13 @@
             }
 
             .table-scroll-wrapper {
-                overflow-x: hidden;
+                overflow-x: auto; /* [MODIFIED] Allow horizontal scroll on mobile */
             }
+
+            /* [MODIFIED] Add display:block to .items-table to fix layout bug */
             .items-table {
                 border: none;
+                display: block;
             }
             .items-table thead {
                 border: none;
