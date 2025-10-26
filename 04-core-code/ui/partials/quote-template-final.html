@@ -266,17 +266,27 @@ auto;
 
         .payment-info p {
             margin: 4px 0;
-            font-size: 1.2em; /* [MODIFIED] Font size increased */
+            font-size: 14px; /* [REVERTED] Font size reverted */
         }
         
-        .payment-info hr {
-            border: 0;
-            border-top: 1px solid lightblue; /* [ADDED] Light blue line */
-            margin: 10px 0;
+        .payment-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.2em; /* [ADDED] Font size increased for the table content */
         }
-
+        .payment-table td {
+            padding: 6px 0;
+            border-bottom: 1px solid lightblue; /* [ADDED] Light blue line */
+        }
+        .payment-table tr:last-child td {
+            border-bottom: none; /* Remove border from last row */
+        }
+        .payment-table td:first-child {
+            font-weight: bold;
+            width: 80px;
+        }
         
-.payment-info strong {
+        .payment-info strong {
             display: inline-block;
             width: 80px;
         }
@@ -436,6 +446,8 @@ full width on mobile */
 none;
                 border-bottom: 1px solid var(--border-color);
                 text-align: right;
+                /* [FIX] Add word-break to prevent long description from overflowing */
+                word-break: break-all;
             }
             .items-table tr td:last-child {
                 border-bottom: none;
@@ -447,6 +459,7 @@ none;
                 padding-right: 
 15px;
                 color: #333;
+                flex-shrink: 0; /* [FIX] Prevent the label from shrinking */
             }
             .items-table td:first-of-type {
                 background-color: var(--primary-color);
@@ -479,15 +492,15 @@ none;
                     <h1>EZ Blinds & Shutters</h1>
                     <p class="abn-line">ABN: 52 62 74 20 777</p>
         
-            <p>U11 / 271 Wells Rd, Chelsea Heights<span class="icon">??</span></p>
+            <p>U11 / 271 Wells Rd, Chelsea Heights<span class="icon">📍</span></p>
                     <p>
-                        <span>0466 965 168<span class="icon">??</span></span>
+                        <span>0466 965 168<span class="icon">📞</span></span>
            
              <span style="margin: 0 10px;">|</span>
-                        <span>ezblinds@ezbns.com.au<span class="icon">?§</span></span>
+                        <span>ezblinds@ezbns.com.au<span class="icon">✉️</span></span>
                     </p>
                 
-    <p>www.ezbns.com.au<span class="icon">??</span></p>
+    <p>www.ezbns.com.au<span class="icon">🌐</span></p>
                 </div>
             </header>
 
@@ -533,16 +546,32 @@ none;
              <div class="summary-payment-wrapper">
                     <section class="payment-info">
                         <h4>Payment Method</h4>
+                        <table class="payment-table">
+                            <tbody>
+                                <tr>
+                                    <td>Bank</td>
+                                    <td>CBA</td>
+                                </tr>
+                                <tr>
+                                    <td>BSB</td>
+                                    <td>062 692</td>
+                                </tr>
+                                <tr>
+                                    <td>Account</td>
+                                    <td>4570 8877</td>
+                                </tr>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Alphalead Pty Ltd</td>
+                                </tr>
+                                <tr>
+                                    <td>PayID</td>
+                                    <td>627 420 777</td>
+                                </tr>
+                            </tbody>
+                        </table>
                  
-       <p><strong>Bank:</strong> CBA</p>
-                        <p><strong>BSB:</strong> 062 692</p>
-                        <p><strong>Account:</strong> 4570 8877</p>
-                 
-       <p><strong>Acc Name:</strong> Alphalead Pty Ltd</p>
-                        <hr>
-                        <p><strong>PayID:</strong> 627 420 777</p>
-        
-                <p style="font-size: 12px; margin-top: 10px;"><em>Please leave your Ph. number as Ref. in the
+       <p style="font-size: 12px; margin-top: 10px;"><em>Please leave your Ph. number as Ref. in the
                                 transaction.</em></p>
                  
    </section>
