@@ -123,16 +123,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 30px;
-            table-layout: fixed; 
         }
-
-        /* [MODIFIED] CSS-based column widths to replace <colgroup> */
-        .items-table th:nth-child(1), .items-table td:nth-child(1) { width: 8%; }
-        .items-table th:nth-child(2), .items-table td:nth-child(2) { width: 42%; }
-        .items-table th:nth-child(3), .items-table td:nth-child(3) { width: 15%; }
-        .items-table th:nth-child(4), .items-table td:nth-child(4) { width: 17.5%; }
-        .items-table th:nth-child(5), .items-table td:nth-child(5) { width: 17.5%; }
-
 
         .items-table thead {
             background-color: var(--primary-color);
@@ -194,7 +185,7 @@
             justify-content: flex-end;
             border: 1px solid var(--border-color);
             border-radius: 4px;
-            padding: 6px 20px 20px 20px; /* Reduced top padding */
+            padding: 6px 20px 20px 20px;
             width: 50%;
             box-sizing: border-box;
         }
@@ -261,20 +252,20 @@
 
         .payment-info p {
             margin: 4px 0;
-            font-size: 14px; /* Font size reverted */
+            font-size: 14px;
         }
         
         .payment-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 1em; /* Reverted font size */
+            font-size: 1em;
         }
         .payment-table td {
             padding: 6px 0;
-            border-bottom: 1px solid lightblue; /* Light blue line */
+            border-bottom: 1px solid lightblue;
         }
         .payment-table tr:last-child td {
-            border-bottom: none; /* Remove border from last row */
+            border-bottom: none;
         }
         .payment-table td:first-child {
             font-weight: bold;
@@ -286,7 +277,6 @@
             width: 80px;
         }
 
-        /* [NEW] A unified style for the notes and terms boxes */
         .notes-terms-box {
             width: 100%;
             margin-top: 30px;
@@ -396,14 +386,14 @@
             }
 
             .table-scroll-wrapper {
-                overflow-x: auto; /* [MODIFIED] Allow horizontal scroll on mobile */
+                overflow-x: auto;
             }
 
             .items-table {
                 border: none;
-                display: block; /* [FIX] Force table to block layout */
+                display: block;
+                table-layout: auto; /* [ADDED] Mimic detailed-list-table */
             }
-
             .items-table thead {
                 border: none;
                 clip: rect(0 0 0 0);
@@ -421,16 +411,16 @@
                 border-radius: 5px;
                 padding: 0;
                 box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-                min-width: 280px; /* Set a minimum width for the card */
+                min-width: 280px;
             }
             .items-table td {
-                display: flex; /* [FIX] Crucial fix: Apply flexbox to td */
-                justify-content: space-between; /* [FIX] Crucial fix: Push content apart */
+                display: flex;
+                justify-content: space-between;
                 padding: 10px 15px;
                 border: none;
                 border-bottom: 1px solid var(--border-color);
                 text-align: right;
-                word-break: break-all;
+                /* [REMOVED] The problematic word-break property is removed. */
             }
             .items-table tr td:last-child {
                 border-bottom: none;
@@ -438,7 +428,7 @@
             .items-table td:before {
                 content: attr(data-label);
                 font-weight: 600;
-                text-align: left; /* Ensure label is left-aligned */
+                text-align: left;
                 padding-right: 15px;
                 color: #333;
                 flex-shrink: 0; 
@@ -488,6 +478,13 @@
                 <section class="items-section">
                     <div class="table-scroll-wrapper">
                         <table class="items-table">
+                            <colgroup>
+                                <col style="width: 8%;">
+                                <col style="width: 42%;">
+                                <col style="width: 15%;">
+                                <col style="width: 17.5%;">
+                                <col style="width: 17.5%;">
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th>NO</th>
