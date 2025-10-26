@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{documentTitle}}</title>
     <style>
-        /* --- 
-?用¨???è???--- */
+        /* --- ?用¨???è???--- */
         :root {
             --primary-color: #1a237e;
             /* 深è???*/
@@ -16,8 +15,7 @@
             --text-color: #333;
             --success-color: #2e7d32;
             /* 綠色，用?ç??é?¡?*/
-         
-   --icon-color: #888888;
+            --icon-color: #888888;
         }
 
         body {
@@ -32,8 +30,7 @@
             max-width: 900px;
             margin: auto;
             background-color: #ffffff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 
-0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             padding: 20px;
         }
 
@@ -49,8 +46,7 @@
             justify-content: space-between;
             align-items: flex-start;
             padding-bottom: 20px;
-            border-bottom: 3px solid 
-var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
             margin-bottom: 30px;
         }
 
@@ -66,8 +62,7 @@ var(--primary-color);
         }
 
         .company-details p {
-   
-         margin: 5px 0 0;
+            margin: 5px 0 0;
             font-size: 14px;
             color: #555;
             display: flex;
@@ -81,8 +76,7 @@ var(--primary-color);
         }
 
         .quotation-meta h2 {
-            
-margin: 0 0 20px 0;
+            margin: 0 0 20px 0;
             font-size: 24px;
             color: #B22222;
             /* Brick Red 磚ç???*/
@@ -98,7 +92,7 @@ margin: 0 0 20px 0;
             margin-right: 8px;
             font-size: 16px;
             width: 20px;
-text-align: center;
+            text-align: center;
             order: -1;
             margin-left: 0;
             margin-right: 8px;
@@ -126,8 +120,7 @@ text-align: center;
 
         /* --- ?目表格 --- */
         .items-table {
-   
-         width: 100%;
+            width: 100%;
             border-collapse: collapse;
             margin-bottom: 30px;
             table-layout: fixed; /* [ADDED] Ensure colgroup is respected */
@@ -144,8 +137,7 @@ text-align: center;
             font-weight: 600;
         }
 
-       
- .items-table tbody tr {
+        .items-table tbody tr {
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -158,8 +150,7 @@ text-align: center;
             font-weight: 500;
         }
 
-      
-  .items-table .details {
+        .items-table .details {
             font-size: 13px;
             color: #666;
         }
@@ -174,8 +165,7 @@ text-align: center;
             font-size: 14px;
         }
 
-     
-   .items-table .discounted-price {
+        .items-table .discounted-price {
             font-weight: bold;
             color: #d32f2f;
         }
@@ -186,8 +176,7 @@ text-align: center;
         }
         
         .table-scroll-wrapper {
-            overflow-x: 
-auto;
+            overflow-x: auto;
             -webkit-overflow-scrolling: touch;
         }
 
@@ -205,7 +194,7 @@ auto;
         .summary-details {
             width: 100%;
             max-width: 400px;
-}
+        }
 
         .summary-details table {
             width: 100%;
@@ -219,7 +208,7 @@ auto;
             text-align: right;
             padding-right: 20px;
             color: #555;
-}
+        }
 
         .summary-details .summary-value {
             text-align: right;
@@ -236,8 +225,7 @@ auto;
         }
 
         .summary-details .savings-value {
-    
-        color: var(--success-color);
+            color: var(--success-color);
             font-weight: bold;
         }
 
@@ -250,8 +238,7 @@ auto;
         }
 
         .payment-info {
-          
-  width: 50%;
+            width: 50%;
             margin-top: 0;
             box-sizing: border-box;
             border: 1px solid var(--border-color);
@@ -296,8 +283,7 @@ auto;
         /* [NEW] A unified style for the notes and terms boxes */
         .notes-terms-box {
             width: 100%;
-            margin-top: 
-30px;
+            margin-top: 30px;
             padding: 20px;
             background-color: #f9f9f9;
             border: 1px solid var(--border-color);
@@ -317,8 +303,7 @@ auto;
             white-space: normal;
             word-wrap: break-word;
         }
-      
-  
+        
         .footer {
             margin-top: 40px;
             padding-top: 20px;
@@ -340,8 +325,7 @@ auto;
             }
 
             .quotation-inner-wrapper {
-    
-            padding: 20px;
+                padding: 20px;
             }
 
             .header {
@@ -350,8 +334,7 @@ auto;
             }
 
             .quotation-meta {
-                order: 
-1;
+                order: 1;
             }
 
             .company-details {
@@ -362,7 +345,7 @@ auto;
             .company-details,
             .quotation-meta {
                 text-align: left;
-}
+            }
 
             .company-details p {
                 justify-content: flex-start;
@@ -372,8 +355,7 @@ auto;
                 padding-right: 0;
             }
 
-            .company-details 
-.icon {
+            .company-details .icon {
                 order: -1;
                 margin-left: 0;
                 margin-right: 8px;
@@ -386,8 +368,7 @@ auto;
             }
 
             .summary-payment-wrapper {
-      
-          flex-direction: column;
+                flex-direction: column;
                 gap: 20px;
             }
             
@@ -396,8 +377,7 @@ auto;
             }
 
             .summary-payment-wrapper .payment-info {
-     
-           order: 2;
+                order: 2;
             }
 
             .payment-info,
@@ -406,8 +386,7 @@ auto;
                 box-sizing: border-box;
             }
 
-            /* [MODIFIED] Ensure notes/terms box is also 
-full width on mobile */
+            /* [MODIFIED] Ensure notes/terms box is also full width on mobile */
             .notes-terms-box {
                 width: 100%;
             }
@@ -415,8 +394,7 @@ full width on mobile */
             .table-scroll-wrapper {
                 overflow-x: hidden;
             }
-           
- .items-table {
+            .items-table {
                 border: none;
             }
             .items-table thead {
@@ -429,8 +407,7 @@ full width on mobile */
                 position: absolute;
                 width: 1px;
             }
-        
-    .items-table tr {
+            .items-table tr {
                 display: block;
                 margin-bottom: 15px;
                 border: 1px solid var(--border-color);
@@ -442,8 +419,7 @@ full width on mobile */
                 display: flex;
                 justify-content: space-between;
                 padding: 10px 15px;
-                border: 
-none;
+                border: none;
                 border-bottom: 1px solid var(--border-color);
                 text-align: right;
                 /* [FIX] Add word-break to prevent long description from overflowing */
@@ -456,8 +432,7 @@ none;
                 content: attr(data-label);
                 font-weight: 600;
                 text-align: left;
-                padding-right: 
-15px;
+                padding-right: 15px;
                 color: #333;
                 flex-shrink: 0; /* [FIX] Prevent the label from shrinking */
             }
@@ -470,8 +445,7 @@ none;
             .items-table td:first-of-type::before {
                 color: white;
             }
- 
-       }
+        }
     </style>
 </head>
 
@@ -482,38 +456,31 @@ none;
             <header class="header">
                 <div class="quotation-meta">
                     <h2>QUOTATION</h2>
-  
-                  <p><strong>Quote No:</strong> {{quoteId}}</p>
+                    <p><strong>Quote No:</strong> {{quoteId}}</p>
                     <p><strong>Issue Date:</strong> {{issueDate}}</p>
                     <p><strong>Due Date:</strong> {{dueDate}}</p>
-             
-   </div>
+                </div>
                 <div class="company-details">
                     <h1>EZ Blinds & Shutters</h1>
                     <p class="abn-line">ABN: 52 62 74 20 777</p>
-        
-            <p>U11 / 271 Wells Rd, Chelsea Heights<span class="icon">📍</span></p>
+                    <p>U11 / 271 Wells Rd, Chelsea Heights<span class="icon">📍</span></p>
                     <p>
                         <span>0466 965 168<span class="icon">📞</span></span>
-           
-             <span style="margin: 0 10px;">|</span>
+                        <span style="margin: 0 10px;">|</span>
                         <span>ezblinds@ezbns.com.au<span class="icon">✉️</span></span>
                     </p>
-                
-    <p>www.ezbns.com.au<span class="icon">🌐</span></p>
+                    <p>www.ezbns.com.au<span class="icon">🌐</span></p>
                 </div>
             </header>
 
             <main>
                 <section class="customer-info">
-               
-     <p>{{{customerInfoHtml}}}</p>
+                    <p>{{{customerInfoHtml}}}</p>
                 </section>
 
                 <section class="items-section">
                     <div class="table-scroll-wrapper">
-                  
-      <table class="items-table">
+                        <table class="items-table">
                             <colgroup>
                                 <col style="width: 8%;">
                                 <col style="width: 42%;">
@@ -523,27 +490,21 @@ none;
                             </colgroup>
                             <thead>
                                 <tr>
-          
-                          <th>NO</th>
+                                    <th>NO</th>
                                     <th>Description</th>
-               
-                     <th class="align-right">QTY</th>
+                                    <th class="align-right">QTY</th>
                                     <th class="align-right">Price</th>
-                  
-                  <th class="align-right">Discounted Price</th>
+                                    <th class="align-right">Discounted Price</th>
                                 </tr>
-                         
-   </thead>
+                            </thead>
                             <tbody>
                                 {{{itemsTableBody}}}
-              
-              </tbody>
+                            </tbody>
                         </table>
                     </div>
                 </section>
 
-   
-             <div class="summary-payment-wrapper">
+                <div class="summary-payment-wrapper">
                     <section class="payment-info">
                         <h4>Payment Method</h4>
                         <table class="payment-table">
@@ -570,82 +531,62 @@ none;
                                 </tr>
                             </tbody>
                         </table>
-                 
-       <p style="font-size: 12px; margin-top: 10px;"><em>Please leave your Ph. number as Ref. in the
+                        <p style="font-size: 12px; margin-top: 10px;"><em>Please leave your Ph. number as Ref. in the
                                 transaction.</em></p>
-                 
-   </section>
+                    </section>
 
                     <section class="summary-section">
                         <div class="summary-details">
-                            
-<table>
+                            <table>
                                 <tbody>
                                     <tr>
-         
-                               <td class="summary-label">Subtotal</td>
+                                        <td class="summary-label">Subtotal</td>
                                         <td class="summary-value">{{subtotal}}</td>
-    
-                                </tr>
+                                    </tr>
                                     <tr>
-         
-                               <td class="summary-label">GST (10%)</td>
+                                        <td class="summary-label">GST (10%)</td>
                                         <td class="summary-value">{{gst}}</td>
-   
-                                 </tr>
+                                    </tr>
                                     <tr class="grand-total">
-       
-                                 <td class="summary-label">Our Offer</td>
+                                        <td class="summary-label">Our Offer</td>
                                         <td class="summary-value">{{grandTotal}}</td>
-  
-                                  </tr>
+                                    </tr>
                                     <tr>
-       
-                                 <td class="summary-label">Deposit (50%)</td>
+                                        <td class="summary-label">Deposit (50%)</td>
                                         <td class="summary-value">{{deposit}}</td>
- 
-                                   </tr>
+                                    </tr>
                                     <tr>
-      
-                                  <td class="summary-label"><strong>Balance</strong></td>
+                                        <td class="summary-label"><strong>Balance</strong></td>
                                         <td class="summary-value"><strong>{{balance}}</strong></td>
- 
-                                   </tr>
+                                    </tr>
                                     <tr>
-      
-                                  <td class="summary-label">You Saved</td>
-                                        <td 
-class="summary-value savings-value">{{savings}}</td>
+                                        <td class="summary-label">You Saved</td>
+                                        <td class="summary-value savings-value">{{savings}}</td>
                                     </tr>
                                 </tbody>
-        
-                    </table>
+                            </table>
                         </div>
                     </section>
-             
-   </div>
+                </div>
 
                 <section class="notes-terms-box">
                     <h4>General Notes</h4>
                     <p>{{{generalNotes}}}</p>
-                
-</section>
+                </section>
 
                 <section class="terms notes-terms-box">
                     <h4>Terms & Conditions</h4>
                     {{{termsAndConditions}}}
                 </section>
 
- 
-           </main>
+            </main>
 
             <footer class="footer">
                 <p>Thank you for your business!</p>
                 <p><strong>EZ Blinds & Shutters</strong></p>
             </footer>
 
-  
-      </div>
+        </div>
     </div>
 </body>
 
