@@ -399,11 +399,11 @@
                 overflow-x: auto; /* [MODIFIED] Allow horizontal scroll on mobile */
             }
 
-            /* [MODIFIED] Add display:block to .items-table to fix layout bug */
             .items-table {
                 border: none;
-                display: block;
+                display: block; /* [FIX] Force table to block layout */
             }
+
             .items-table thead {
                 border: none;
                 clip: rect(0 0 0 0);
@@ -421,11 +421,11 @@
                 border-radius: 5px;
                 padding: 0;
                 box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-                min-width: 280px; /* [ADDED] Set a minimum width for the card */
+                min-width: 280px; /* Set a minimum width for the card */
             }
             .items-table td {
-                display: flex;
-                justify-content: space-between;
+                display: flex; /* [FIX] Crucial fix: Apply flexbox to td */
+                justify-content: space-between; /* [FIX] Crucial fix: Push content apart */
                 padding: 10px 15px;
                 border: none;
                 border-bottom: 1px solid var(--border-color);
@@ -438,7 +438,7 @@
             .items-table td:before {
                 content: attr(data-label);
                 font-weight: 600;
-                text-align: left; /* [ADDED] Ensure label is left-aligned */
+                text-align: left; /* Ensure label is left-aligned */
                 padding-right: 15px;
                 color: #333;
                 flex-shrink: 0; 
