@@ -170,28 +170,19 @@
             border-collapse: collapse;
         }
 
-        .appendix-flex-container > tr > .table-scroll-wrapper {
+        .appendix-flex-container > .table-scroll-wrapper {
             width: 400px;
             vertical-align: top;
             padding-right: 20px;
         }
 
-        .appendix-flex-container > tr > .legend {
+        .appendix-flex-container > .legend {
             vertical-align: top;
         }
         
-        /* 修正手機模式下的垂直排列，確保表格和圖例不會水平擠壓 */
         @media (max-width: 850px) {
-            .appendix-flex-container {
-                display: block;
-            }
-            
-            .appendix-flex-container tr {
-                display: block;
-            }
-            
-            .appendix-flex-container > tr > .table-scroll-wrapper,
-            .appendix-flex-container > tr > .legend {
+            .appendix-flex-container > .table-scroll-wrapper,
+            .appendix-flex-container > .legend {
                 display: block;
                 width: 100% !important;
                 padding-right: 0 !important;
