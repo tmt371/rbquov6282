@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{documentTitle}}</title>
     <style>
-        /* --- ?用¨???è???--- */
+        /* --- 通用樣式與變數 --- */
         :root {
             --primary-color: #1a237e;
-            /* 深è???*/
+            /* 深藍色 */
             --border-color: #e0e0e0;
-            /* ?æ?顏色 */
+            /* 邊框顏色 */
             --text-color: #333;
             --success-color: #2e7d32;
-            /* 綠色，用?ç??é?¡?*/
+            /* 綠色，用於節省金額 */
             --icon-color: #888888;
         }
 
@@ -40,7 +40,7 @@
             border-radius: 8px;
         }
 
-        /* --- ?é? Header --- */
+        /* --- 頁首 Header --- */
         .header {
             display: flex;
             justify-content: space-between;
@@ -50,7 +50,7 @@
             margin-bottom: 30px;
         }
 
-        /* ?司資è? */
+        /* 公司資訊 */
         .company-details {
             text-align: right;
         }
@@ -70,7 +70,7 @@
             justify-content: flex-end;
         }
 
-        /* ?價?è?¨?*/
+        /* 報價單資訊 */
         .quotation-meta {
             text-align: left;
         }
@@ -79,7 +79,7 @@
             margin: 0 0 20px 0;
             font-size: 24px;
             color: #B22222;
-            /* Brick Red 磚ç???*/
+            /* Brick Red 磚紅色 */
         }
 
         .quotation-meta p {
@@ -108,7 +108,7 @@
             padding-right: 28px;
         }
 
-        /* --- 客戶資è? --- */
+        /* --- 客戶資訊 --- */
         .customer-info {
             margin-bottom: 40px;
         }
@@ -118,13 +118,21 @@
             line-height: 1.6;
         }
 
-        /* --- ?目表格 --- */
+        /* --- 項目表格 --- */
         .items-table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 30px;
-            table-layout: fixed; /* [ADDED] Ensure colgroup is respected */
+            table-layout: fixed; 
         }
+
+        /* [NEW] CSS-based column widths to replace <colgroup> */
+        .items-table th:nth-child(1), .items-table td:nth-child(1) { width: 8%; }
+        .items-table th:nth-child(2), .items-table td:nth-child(2) { width: 42%; }
+        .items-table th:nth-child(3), .items-table td:nth-child(3) { width: 15%; }
+        .items-table th:nth-child(4), .items-table td:nth-child(4) { width: 17.5%; }
+        .items-table th:nth-child(5), .items-table td:nth-child(5) { width: 17.5%; }
+
 
         .items-table thead {
             background-color: var(--primary-color);
@@ -180,13 +188,13 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        /* --- 總è? --- */
+        /* --- 總計 --- */
         .summary-section {
             display: flex;
             justify-content: flex-end;
             border: 1px solid var(--border-color);
             border-radius: 4px;
-            padding: 6px 20px 20px 20px; /* [MODIFIED] Reduced top padding */
+            padding: 6px 20px 20px 20px; /* Reduced top padding */
             width: 50%;
             box-sizing: border-box;
         }
@@ -253,17 +261,17 @@
 
         .payment-info p {
             margin: 4px 0;
-            font-size: 14px; /* [REVERTED] Font size reverted */
+            font-size: 14px; /* Font size reverted */
         }
         
         .payment-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 1em; /* [MODIFIED] Reverted font size */
+            font-size: 1em; /* Reverted font size */
         }
         .payment-table td {
             padding: 6px 0;
-            border-bottom: 1px solid lightblue; /* [ADDED] Light blue line */
+            border-bottom: 1px solid lightblue; /* Light blue line */
         }
         .payment-table tr:last-child td {
             border-bottom: none; /* Remove border from last row */
@@ -277,8 +285,6 @@
             display: inline-block;
             width: 80px;
         }
-
-        /* [REMOVED] Old .pmd-cta-wrapper is no longer needed */
 
         /* [NEW] A unified style for the notes and terms boxes */
         .notes-terms-box {
@@ -313,9 +319,8 @@
             text-align: center;
         }
 
-        /* [MODIFIED] .terms now uses the shared style */
         .terms {
-            margin-top: 20px; /* Reduced margin as it's now part of a consistent flow */
+            margin-top: 20px; 
         }
 
 
@@ -386,7 +391,6 @@
                 box-sizing: border-box;
             }
 
-            /* [MODIFIED] Ensure notes/terms box is also full width on mobile */
             .notes-terms-box {
                 width: 100%;
             }
@@ -422,7 +426,6 @@
                 border: none;
                 border-bottom: 1px solid var(--border-color);
                 text-align: right;
-                /* [FIX] Add word-break to prevent long description from overflowing */
                 word-break: break-all;
             }
             .items-table tr td:last-child {
@@ -434,7 +437,7 @@
                 text-align: left;
                 padding-right: 15px;
                 color: #333;
-                flex-shrink: 0; /* [FIX] Prevent the label from shrinking */
+                flex-shrink: 0; 
             }
             .items-table td:first-of-type {
                 background-color: var(--primary-color);
@@ -481,13 +484,6 @@
                 <section class="items-section">
                     <div class="table-scroll-wrapper">
                         <table class="items-table">
-                            <colgroup>
-                                <col style="width: 8%;">
-                                <col style="width: 42%;">
-                                <col style="width: 15%;">
-                                <col style="width: 17.5%;">
-                                <col style="width: 17.5%;">
-                            </colgroup>
                             <thead>
                                 <tr>
                                     <th>NO</th>
