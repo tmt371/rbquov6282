@@ -180,10 +180,17 @@ touch;
             align-items: flex-start;
         }
 
-        .appendix-flex-container > * {
-            flex: 1;
-            min-width: 0;
-        }
+/* <CHANGE> 分別設定兩個子元素的 flex 屬性，避免表格擠壓圖例 */
+.appendix-flex-container > .table-scroll-wrapper {
+    flex: 0 0 auto;        /* 不伸縮，根據內容決定寬度 */
+    max-width: 400px;      /* 最大寬度 400px */
+    min-width: 272px;      /* 最小寬度 272px */
+}
+
+.appendix-flex-container > .legend {
+    flex: 1;               /* 圖例佔用剩餘空間 */
+    min-width: 250px;      /* 確保圖例有足夠寬度 */
+}
         
         @media (max-width: 850px) {
  
