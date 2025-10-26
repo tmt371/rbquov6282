@@ -270,6 +270,13 @@
         .payment-table td:first-child {
             font-weight: bold;
             width: 80px;
+            text-align: right;      /* [MODIFIED] */
+            padding-right: 2px;     /* [MODIFIED] */
+        }
+        .payment-table td:nth-child(2) {
+            text-align: left;       /* [ADDED] */
+            padding-left: 4px;      /* [ADDED] */
+            border-left: 1px solid var(--border-color); /* [ADDED] */
         }
         
         .payment-info strong {
@@ -392,7 +399,7 @@
             .items-table {
                 border: none;
                 display: block;
-                table-layout: auto; /* [ADDED] Mimic detailed-list-table */
+                table-layout: auto;
             }
             .items-table thead {
                 border: none;
@@ -420,7 +427,6 @@
                 border: none;
                 border-bottom: 1px solid var(--border-color);
                 text-align: right;
-                /* [REMOVED] The problematic word-break property is removed. */
             }
             .items-table tr td:last-child {
                 border-bottom: none;
@@ -512,19 +518,19 @@
                                 </tr>
                                 <tr>
                                     <td>BSB</td>
-                                    <td>062 692</td>
+                                    <td>0 6 2 &nbsp;&nbsp; 6 9 2</td>
                                 </tr>
                                 <tr>
                                     <td>Account</td>
-                                    <td>4570 8877</td>
+                                    <td>4 5 7 0 &nbsp;&nbsp; 8 8 7 7</td>
                                 </tr>
                                 <tr>
                                     <td>Name</td>
-                                    <td>Alphalead Pty Ltd</td>
+                                    <td>Alphalead &nbsp;Pty &nbsp;Ltd</td>
                                 </tr>
                                 <tr>
                                     <td>PayID</td>
-                                    <td>627 420 777</td>
+                                    <td>6 2 7 &nbsp;&nbsp; 4 2 0 &nbsp;&nbsp; 7 7 7</td>
                                 </tr>
                             </tbody>
                         </table>
